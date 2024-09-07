@@ -14,7 +14,7 @@ This tool scans Python projects for imports, generates a `requirements.txt` file
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/python-dependency-scanner.git
+   git clone https://github.com/science64/python-dependency-scanner.git
    cd python-dependency-scanner
    ```
 
