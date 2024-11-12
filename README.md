@@ -13,9 +13,17 @@ A smart Python tool that automatically scans your Python projects, detects impor
 
 ## Quick Start
 
+<<<<<<< HEAD
 ```bash
 # Install required package
 pip install chardet
+=======
+1. Clone this repository:
+   ```
+   git clone https://github.com/science64/python-dependency-scanner.git
+   cd python-dependency-scanner
+   ```
+>>>>>>> 3329e18af5f40ec4417e128df09c09079989b46d
 
 # Run the scanner (interactive mode)
 python dependency_scanner.py
