@@ -13,17 +13,13 @@ A smart Python tool that automatically scans your Python projects, detects impor
 
 ## Quick Start
 
-<<<<<<< HEAD
 ```bash
 # Install required package
 pip install chardet
-=======
-1. Clone this repository:
-   ```
-   git clone https://github.com/science64/python-dependency-scanner.git
-   cd python-dependency-scanner
-   ```
->>>>>>> 3329e18af5f40ec4417e128df09c09079989b46d
+
+# Clone the repository
+git clone https://github.com/science64/python-dependency-scanner.git
+cd python-dependency-scanner
 
 # Run the scanner (interactive mode)
 python dependency_scanner.py
@@ -35,12 +31,14 @@ python dependency_scanner.py -i /path/to/your/project
 ## Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/science64/python-dependency-scanner.git
 cd python-dependency-scanner
 ```
 
 2. Install required package:
+
 ```bash
 pip install chardet
 ```
@@ -48,6 +46,7 @@ pip install chardet
 ## Usage Examples
 
 ### Basic Usage
+
 ```bash
 # Scan current directory
 python dependency_scanner.py
@@ -59,6 +58,7 @@ python dependency_scanner.py -i /path/to/project
 ### What It Does
 
 When you run the scanner, it will:
+
 1. Recursively scan all Python files in the directory
 2. Detect imports like:
    - Standard imports (`import numpy`)
@@ -73,7 +73,7 @@ When you run the scanner, it will:
 ```
 Scanning directory: /path/to/project
 
-Found imports in main.py: 
+Found imports in main.py:
 - opencv-python (from import cv2)
 - mediapipe
 - numpy
@@ -95,12 +95,15 @@ Do you want to proceed with the installation? (yes/no):
 ## Smart Package Detection
 
 The scanner recognizes packages in three ways:
+
 1. 📗 Through the package mapping file
 2. 🔍 By checking installed packages
 3. 📦 Through a built-in list of common packages
 
 ### Built-in Package Recognition
+
 Common packages that are automatically recognized include:
+
 - `cv2` (opencv-python)
 - `mediapipe`
 - `tensorflow`
@@ -113,29 +116,32 @@ Common packages that are automatically recognized include:
 ## Package Name Mapping
 
 The tool includes a `package_mapping.json` file that maps import names to package names. For example:
+
 ```json
 {
-    "PIL": "Pillow",
-    "cv2": "opencv-python",
-    "sklearn": "scikit-learn",
-    "bs4": "beautifulsoup4"
+  "PIL": "Pillow",
+  "cv2": "opencv-python",
+  "sklearn": "scikit-learn",
+  "bs4": "beautifulsoup4"
 }
 ```
 
 ### Adding Custom Mappings
 
 You can add your own mappings:
+
 1. Open `package_mapping.json`
 2. Add new entries:
    ```json
    {
-       "your_import": "package-name"
+     "your_import": "package-name"
    }
    ```
 
 ## Project Structure
 
 After running the scanner, your project will look like this:
+
 ```
 your-project/
 ├── .venv/                  # Virtual environment
@@ -147,6 +153,7 @@ your-project/
 ## Debugging
 
 If certain imports aren't being detected:
+
 1. Run with `-i` flag to specify directory explicitly
 2. Check if the Python file has proper `.py` extension
 3. Verify file permissions
@@ -155,6 +162,7 @@ If certain imports aren't being detected:
 ## Contributing
 
 Contributions are welcome! Areas for improvement:
+
 - Additional package mappings
 - Support for more virtual environment configurations
 - Enhanced import detection patterns
