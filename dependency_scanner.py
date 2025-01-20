@@ -234,10 +234,6 @@ def main():
     print("\nScanning for imports...")
     imports = scan_directory(project_dir)
     
-    if not imports:
-        print("\nNo external package imports found.")
-        sys.exit(0)
-    
     print("\nCreating requirements.txt...")
     requirements_file = create_requirements_file(imports, project_dir)
     print(f"Requirements file created at: {requirements_file}")
@@ -246,6 +242,10 @@ def main():
     venv_path = os.path.join(project_dir, venv_name)
     
     upgrade_pip(venv_path)
+        
+    if not imports:
+        print("\nNo external package imports found.")
+        sys.exit(0)
     
     install_requirements(venv_path, requirements_file)
     
